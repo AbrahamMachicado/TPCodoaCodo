@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --wheat: #fedeb3;
+    --walnut: #773f1a;
+    --red: #ff0000;
+    --violet: #572364;
+    --violet2: #4a1942;
+    --grey: #828282;
+    --grey2: #666666;
+    --grey3: #515151;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--wheat);
+}
+
+/* Media querie para monitor grande */
+
+@media all and (min-width: 1024px) {
+    /* Main */
+    main {
+        color: var(--white);
+        background-color: wheat;
+    }
+    #cont-banner {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    #banner {
+        /* width: 100%; */
+        /* height: 90%; */
+        background-image: url(../images/fondocolor3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedor p{
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1em;
+        line-height: 3em;
+        padding: 2em;
+        margin: 5em;
+    }
+}
+
+/* Media querie para monitor pequeño y tablet horiz.*/
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    /* Main */
+    main {
+        color: var(--white);
+        background-color: wheat;
+    }
+    #cont-banner {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    #banner {
+        /* width: 100%; */
+        /* height: 70%; */
+        background-image: url(../images/fondocolor3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedor p{
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1em;
+        line-height: 3em;
+        padding: 2em;
+        margin: 5em;
+    }
+}
+
+/* Media querie para tablets y celular horiz */
+
+@media all and (min-width:425px) and (max-width:767px) {
+    main {
+        color: var(--white);
+        background-color: wheat;
+        font-size: 13px;
+    }
+    #cont-banner {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    #banner {
+        /* width: 100%; */
+        /* height: 50%; */
+        background-image: url(../images/fondocolor3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedor p{
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1em;
+        line-height: 3em;
+        padding: 2em;
+        margin: 5em;
+    }
+}
+
+/* Media querie para celular vert. */
+
+@media all and (max-width:424px) {
+    main {
+        color: var(--white);
+        background-color: wheat;
+        font-size: 11px;
+    }
+    #cont-banner {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    #banner {
+        /* width: 100%; */
+        /* height: 30%; */
+        background-image: url(../images/fondocolor3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedor p{
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1em;
+        line-height: 3em;
+        padding: 2em;
+        margin: 5em;
+    }
+}

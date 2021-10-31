@@ -1,0 +1,431 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --wheat: #fedeb3;
+    --walnut: #773f1a;
+    --red: #ff0000;
+    --violet: #572364;
+    --violet2: #4a1942;
+    --grey: #828282;
+    --grey2: #666666;
+    --grey3: #515151;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--wheat);
+}
+
+/* Media querie para monitor grande */
+
+@media all and (min-width: 1024px) {
+    /*Header*/
+    header {
+        position: relative;
+        z-index: 10;
+    }
+    .form-control>p{
+        z-index: 5;
+    }
+    /* Main Navbar */
+    #main-navbar {
+        background-color: var(--black);
+        height: 2.875em;
+        width: 100vw;
+    }
+    #main-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #main-menu>li {
+        background-color: var(--black);
+        padding: .8em 0;
+    }
+    #main-menu>li>a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0 2.5em;
+    }
+    /*secondary Navbar*/
+    #secondarymenu {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    #secondarymenu>li {
+        background-color: var(--black);
+        display: flex;
+        justify-content: center;
+        padding: .8em 0;
+    }
+    #main-menu>li:hover>ul {
+        display: block;
+    }
+    #secondarymenu>li>a {
+        color: var(--white);
+        text-decoration: none;
+    }
+    /* Animacion hover navbar */
+    #main-menu li>a {
+        position: relative;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover {
+        color: var(--grey);
+    }
+    #main-menu li>a::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0.2em;
+        width: 0%;
+        background-color: var(--grey);
+        bottom: -.5em;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover::after {
+        width: 100%;
+    }
+    /* Footer */
+    footer div ul {
+        padding: 1em 0;
+        list-style: none;
+        display: flex;
+        background-color: var(--black);
+        justify-content: center;
+        gap: 3em;
+    }
+    footer div ul li a {
+        text-decoration: none;
+        color: var(--white);
+    }
+    footer p {
+        padding: 1em 0;
+        text-align: center;
+    }
+}
+
+/* Media querie para monitor pequeño y tablet horiz.*/
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    /*Header*/
+    header {
+        position: relative;
+        z-index: 10;
+    }
+    .form-control>p{
+        z-index: 5;
+    }
+    /* Main Navbar */
+    #main-navbar {
+        background-color: var(--black);
+        height: 2.875em;
+        width: 100vw;
+    }
+    #main-menu {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #main-menu>li {
+        background-color: var(--black);
+        padding: .8em 0;
+    }
+    #main-menu>li>a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0 2.5em;
+    }
+    /*secondary Navbar*/
+    #secondarymenu {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    #secondarymenu>li {
+        background-color: var(--black);
+        display: flex;
+        justify-content: center;
+        padding: .8em 0;
+    }
+    #main-menu>li:hover>ul {
+        display: block;
+    }
+    #secondarymenu>li>a {
+        color: var(--white);
+        text-decoration: none;
+    }
+    /* Animacion hover navbar */
+    #main-menu li>a {
+        position: relative;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover {
+        color: var(--grey);
+    }
+    #main-menu li>a::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0.2em;
+        width: 0%;
+        background-color: var(--grey);
+        bottom: -.5em;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover::after {
+        width: 100%;
+    }
+    /* Footer */
+    footer div ul {
+        padding: 1em 0;
+        list-style: none;
+        display: flex;
+        background-color: var(--black);
+        justify-content: center;
+        gap: 3em;
+    }
+    footer div ul li a {
+        text-decoration: none;
+        color: var(--white);
+    }
+    footer p {
+        padding: 1em 0;
+        text-align: center;
+    }
+}
+
+/* Media querie para tablets y celular horiz */
+
+@media all and (min-width:425px) and (max-width:767px) {
+    body {
+        font-size: 13px;
+    }
+    /*Header*/
+    header {
+        position: relative;
+        z-index: 10;
+    }
+    .form-control>p{
+        z-index: 5;
+    }
+    /* Main Navbar */
+    #main-navbar {
+        background-color: var(--black);
+        height: 2.9em;
+        width: 100vw;
+    }
+    #main-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #main-menu>li {
+        background-color: var(--black);
+        padding: .8em 0;
+    }
+    #main-menu>li>a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0 2.5em;
+    }
+    /*secondary Navbar*/
+    #secondarymenu {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    #secondarymenu>li {
+        background-color: var(--black);
+        display: flex;
+        justify-content: center;
+        padding: .8em 0;
+    }
+    #main-menu>li:hover>ul {
+        display: block;
+    }
+    #secondarymenu>li>a {
+        color: var(--white);
+        text-decoration: none;
+    }
+    /* Animacion hover navbar */
+    #main-menu li>a {
+        position: relative;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover {
+        color: var(--grey);
+    }
+    #main-menu li>a::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0.2em;
+        width: 0%;
+        background-color: var(--grey);
+        bottom: -.5em;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover::after {
+        width: 100%;
+    }
+    /* Footer */
+    footer div ul {
+        padding: 1em 0;
+        list-style: none;
+        display: flex;
+        background-color: var(--black);
+        justify-content: center;
+        gap: 3em;
+    }
+    footer div ul li a {
+        text-decoration: none;
+        color: var(--white);
+    }
+    footer p {
+        padding: 1em 0;
+        text-align: center;
+    }
+}
+
+/* Media querie para celular vert. */
+
+@media all and (max-width:424px) {
+    body {
+        font-size: 11px;
+    }
+    .main-menu, .main-menu.open {
+        z-index: 10;
+    }
+    .form-control>p{
+        z-index: 5;
+    }
+    
+    /* Main Navbar */
+    #main-navbar {
+        background-color: var(--black);
+        height: 2.9em;
+        width: 100vw;
+        position: relative;
+    }
+    /* Menu desplegable */
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 15;
+    }
+    .main-menu {
+        background-color: var(--black);
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        list-style: none;
+        display: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        clip-path: inset(1000px);
+        transition: all 0.5s ease-in-out;
+        pointer-events: none;
+    }
+    .main-menu.open {
+        clip-path: inset(0px);
+        pointer-events: all;
+    }
+    .main-menu>li {
+        background-color: var(--black);
+        padding: 0.8em 0;
+    }
+    .main-menu>li>a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0 2.5em;
+    }
+    /*secondary Navbar*/
+    #secondarymenu {
+        list-style: none;
+        /* display: none; */
+        margin: 0;
+        padding: 0;
+    }
+    #secondarymenu>li {
+        background-color: var(--black);
+        display: flex;
+        justify-content: flex-start;
+        padding: .8em 0;
+    }
+    #secondarymenu>li:first-child {
+        padding-top: 1.6em;
+    }
+    #secondarymenu>li:last-child {
+        padding-bottom: 0;
+    }
+    #main-menu>li:hover>ul {
+        display: block;
+    }
+    #secondarymenu>li>a {
+        color: var(--white);
+        padding-left: 2.5em;
+        text-decoration: none;
+    }
+    /* Animacion hover navbar */
+    #main-menu li>a {
+        position: relative;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover {
+        color: var(--grey);
+    }
+    #main-menu li>a::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0.2em;
+        width: 0%;
+        background-color: var(--grey);
+        bottom: -.5em;
+        transition: all ease-in-out 0.25s;
+    }
+    #main-menu li>a:hover::after {
+        width: 100%;
+    }
+    /* Footer */
+    footer div ul {
+        padding: 1em 0;
+        list-style: none;
+        display: flex;
+        background-color: var(--black);
+        justify-content: center;
+        gap: 3em;
+    }
+    footer div ul li a {
+        text-decoration: none;
+        color: var(--white);
+    }
+    footer p {
+        padding: 1em 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black:#000000;
+    --white:#ffffff;
+    --wheat:#fedeb3;
+    --walnut: #773f1a;
+    --red: #ff0000;
+    --violet:#572364;
+    --violet2:#4a1942;
+    --grey: #828282;
+    --grey2:#666666;
+    --grey3:#515151;
+}
+
+
+main {
+    background: var(--wheat);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.contenedor {
+    background: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    font-size: .8em;
+}
+.cabecera {
+    background: var(--black);
+    color:var(--white);
+    text-align: center;
+    border-bottom: 1px solid var(--black);
+    padding: 20px 40px;
+} 
+ 
+.cabecera>h2{
+    font-weight: normal;
+}
+
+#formulario {
+    padding: 30px 20px;
+}
+  
+.form-control {    
+    margin-bottom: 7px;
+    padding-bottom: 20px;
+    position: relative;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.form-control label {
+    display:inline-block;
+    margin-bottom: 7px;
+    font-weight:200;
+}
+.form-control input, .form-control textarea {
+    border: .5px solid var(--black);
+    background-color: ivory;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;    
+}
+.form-control, input:focus {
+    outline: none;
+}
+
+.form-control.ok input {
+    border: 0.1px solid;
+    border-color: #08ffc8;
+}
+.form-control.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+}
+#formulario button {
+    background: var(--violet2);
+    border:1px solid var(--violet2);
+    border-radius: 5px;
+    color: ivory;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.form-control>p {
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+
+.form-control.falla p {
+    visibility: visible;
+    color:#e74c3c;
+}
+
